@@ -4,10 +4,10 @@ use std::io;
 fn main() {
    let number = thread_rng().gen_range(1..101);
    let mut guess: i32 = 0;
+   println!("A number has been generated. Guess the number that has been entered.");
    while guess != number {
-        println!("A number has been generated. Guess the number that has been entered.");
         let mut buffer = String::new();
-        //This will throw an error if an int hasn't been added. Error handling has not been covered yet.
+        //This will throw an error if an int isn't entered by the user. Error handling has not been covered yet.
         io::stdin().read_line(&mut buffer);
         guess = buffer.trim().parse().unwrap();
         if guess < number {
