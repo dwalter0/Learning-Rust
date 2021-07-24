@@ -1,0 +1,1 @@
+C:\Users\ds_wa\OneDrive\Documents\Rust\Learning-Rust\challenge_max_min_mean\target\debug\challenge_max_min_mean.exe: C:\Users\ds_wa\OneDrive\Documents\Rust\Learning-Rust\challenge_max_min_mean\src\main.rs
