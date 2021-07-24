@@ -10,3 +10,6 @@ Young
 Duke
 Cernan
 Schmitt
+
+Armstrong
+Walters
