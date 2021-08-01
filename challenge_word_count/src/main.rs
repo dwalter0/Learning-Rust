@@ -20,8 +20,7 @@ fn run_process(argument: String)
 {
     let file_contents = read_file(argument);
     let file_contents_cleaned = file_contents.to_lowercase();
-    let word_split = file_contents_cleaned.split_whitespace();
-    let word_count = hashify_words(&word_split);
+        let word_count = hashify_words(&file_contents_cleaned);
 
     get_top_word(word_count);
 }
@@ -51,10 +50,10 @@ fn get_top_word(word_count: HashMap<&str,u32>){
     }
 }
 
-fn hashify_words<'a>(word_array: &'a std::str::SplitWhitespace) -> HashMap<&'a str,u32> {
-    let cloned_word_array = word_array.clone();
+fn hashify_words<'a>(file_contents_cleaned: &'a String) -> HashMap<&'a str,u32> {
+    let word_split = file_contents_cleaned.split_whitespace();
     let mut word_count = HashMap::new();
-    for word in cloned_word_array {
+    for word in word_split {
         let word_entry = word_count.entry(word).or_insert(0);
         *word_entry += 1;
     }
